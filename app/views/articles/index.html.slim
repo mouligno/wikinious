@@ -1,0 +1,17 @@
+.row
+  .columns.large-12
+    h1 List of articles
+
+.row
+  .columns.large-12
+    - if @articles.size > 0
+      ul.articles
+        - @articles.each do |article|
+          li = link_to article.title, article_path(article)
+    - else
+      p No articles has been added, just add some anonymous ones ;-)
+
+.row
+  .columns.large-12
+    hr
+    = link_to 'Add an article', new_article_path, class: 'button small'

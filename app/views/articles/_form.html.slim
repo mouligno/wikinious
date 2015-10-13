@@ -1,0 +1,14 @@
+= javascript_include_tag 'init-ace-editor'
+
+= form_for(article) do |form|
+  .form-group
+    = form.label :title
+    = form.text_field :title
+
+  .form-group.ace-editor-container
+    = form.label :content
+    = form.text_area(:content, cols: 20, rows: 10)
+    #editor
+
+  .form-group
+    = form.submit class: 'button'

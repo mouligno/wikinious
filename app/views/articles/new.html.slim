@@ -1,0 +1,12 @@
+.row
+  .columns.large-12
+    h1 Add a new article
+
+.row
+  .columns.large-12
+    = render 'form', article: @article
+
+.row
+  .columns.large-12
+    hr
+    = link_to 'Back to the articles list', articles_path

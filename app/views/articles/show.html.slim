@@ -1,0 +1,14 @@
+.row
+  .columns.large-12
+    h1 = @article.title
+
+.row
+  .columns.large-12
+    p = @markdown.render(@article.content).html_safe
+
+.row
+  .columns.large-12
+    hr
+    =' link_to 'Edit', edit_article_path, class: 'button small'
+    =' link_to 'Back to the articles list', articles_path, class: 'button secondary small'
+    =' link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" }, class: 'button alert small'
