@@ -1,0 +1,1 @@
+$(document).ready(function(){var e=ace.edit("editor");e.setTheme("ace/theme/github");var t=$("#article_content").hide();e.getSession().setValue(t.val()),e.getSession().on("change",function(){t.val(e.getSession().getValue())})});
